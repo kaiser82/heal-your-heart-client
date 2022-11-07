@@ -49,7 +49,29 @@ const Navbar = () => {
                     <li><a>Item 3</a></li>
                 </ul>
             </div>
-            <div className="navbar-end">
+
+            <div className="navbar-end space-x-5 ">
+
+            </div>
+
+            <div className="navbar-end space-x-3">
+                <div className='hidden md:flex justify-center items-center space-x-3 '>
+                    <p className='hidden lg:block'>
+                        {
+                            user?.displayName ? <span>{user.displayName}</span> : <span>{user?.email}</span>
+                        }
+                    </p>
+                    {
+                        user?.photoURL &&
+
+                        <div className="avatar p-1">
+                            <div className="w-8 lg:w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img src={user.photoURL} alt="profilePic" />
+                            </div>
+                        </div>
+
+                    }
+                </div>
                 {
                     user ? <button onClick={handleLogOut} className="btn btn-ghost normal-case">Sign Out</button> :
                         <Link to={'/signIn'} className="btn btn-ghost">Sign In</Link>

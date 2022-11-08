@@ -1,0 +1,44 @@
+[
+	{
+		"serviceName": "General Cardiac Consultation",
+		"image": "https://media.sciencephoto.com/f0/34/95/63/f0349563-800px-wm.jpg",
+		"rating": 5,
+		"price": "$30.80",
+		"description": "During the cardiac consultation, your doctor will evaluate past medical history, and perform thorough physical examination and tests to assess the risk of developing heart diseases. Early diagnosis may have a better prognosis and minimize the complications."
+	},
+	{
+		"serviceName": "EchoCardiogram",
+		"image": "https://myheart.net/wp-content/uploads/2013/08/dreamstime_m_299103341.jpg",
+		"rating": 4,
+		"price": "$37.94",
+		"description": "An echocardiogram checks how your heart's chambers and valves are pumping blood through your heart. An echocardiogram uses electrodes to check your heart rhythm and ultrasound technology to see how blood moves through your heart. An echocardiogram can help your doctor diagnose heart conditions."
+	},
+	{
+		"serviceName": "Cardiac Stress Test ",
+		"image": "https://www.goredforwomen.org/-/media/Images/Health-Topics/Heart-Attack/Exercise-stress-test.jpg",
+		"rating": 3,
+		"price": "$70.53",
+		"description": "In a stress test, you walk on a treadmill that makes your heart work progressively harder. An electrocardiogram (ECG) monitors your heart's electrical rhythms. The doctor also measures your blood pressure and monitors whether you have symptoms like chest discomfort or fatigue. Abnormalities in blood pressure, heart rate, or ECG or worsening physical symptoms could point to coronary artery disease (CAD): fatty deposits (plaques) that reduce the flow of oxygen-rich blood to the heart muscle."
+	},
+	{
+		"serviceName": "Heart Rhythm Monitoring",
+		"image": "http://www.vakhospital.com/wp-content/uploads/holter-monitor.jpg",
+		"rating": 4,
+		"price": "$67.02",
+		"description": "A Holter monitor is a small, wearable device that records the heart's rhythm. It's used to detect or determine the risk of irregular heartbeats (arrhythmias).A Holter monitor test may be done if a traditional electrocardiogram (ECG or EKG) doesn't provide enough details about the heart's condition. If the irregular heartbeats are infrequent, a longer term monitor called an event recorder may be needed."
+	},
+	{
+		"serviceName": "Electrocardiogram Testing",
+		"image": "https://www.sonseniormedicare.com/wp-content/uploads/2022/09/electrocardiogram.jpg",
+		"rating": 5,
+		"price": "$19.73",
+		"description": "An electrocardiogram — also called ECG or EKG — is often done in a health care provider's office, a clinic or a hospital room. ECG machines are standard equipment in operating rooms and ambulances. Some personal devices, such as smartwatches, offer ECG monitoring. Ask your health care provider if this is an option for you."
+	},
+	{
+		"serviceName": "Cardiac Rehabilitation",
+		"image": "https://healthblog.uofmhealth.org/sites/consumer/files/2020-04/women_doing_light_weight_training_rehab.jpg",
+		"rating": 4,
+		"price": "$18.73",
+		"description": "Cardiac rehabilitation, also called cardiac rehab, is a customized outpatient program of exercise and education. The program is designed to help you improve your health and recover from a heart attack, other forms of heart disease or surgery to treat heart disease."
+	}
+]

@@ -20,6 +20,7 @@ const Navbar = () => {
                         <li><Link to='/'>Home</Link></li>
 
                         <li><Link to='/services'>Services</Link></li>
+                        <li><Link to='/blogs'>Blogs</Link></li>
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl"><span><img className='w-12 p-2' src="logo.png" alt="" /></span> Heal Your Heart</Link>
@@ -29,6 +30,7 @@ const Navbar = () => {
                     <li><Link to='/'>Home</Link></li>
 
                     <li><Link to='/services'>Services</Link></li>
+                    <li><Link to='/blogs'>Blogs</Link></li>
                 </ul>
             </div>
 

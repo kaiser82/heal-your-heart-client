@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Card = ({ service }) => {
-    const { serviceName, rating, price, image, description } = service
+    const { _id, serviceName, rating, price, image, description } = service
     return (
         <div className="card card-compact w-full bg-base-100 shadow-xl">
             <figure><img className='w-11/12 rounded-lg' src={image} alt="Shoes" /></figure>
@@ -14,7 +15,7 @@ const Card = ({ service }) => {
                         <p className='font-semibold'>Price: {price}</p>
                         <p className='flex text-md items-center space-x-1'><FaStar className='text-yellow-500' /> <span>{rating}</span></p>
                     </div>
-                    <button className="btn btn-primary">View Details</button>
+                    <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>
                 </div>
             </div>
         </div>

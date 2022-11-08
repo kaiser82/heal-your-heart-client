@@ -7,7 +7,7 @@ const Services = () => {
 
     return (
         <div>
-            <h2>All the services</h2>
+            <h2 className='text-4xl font-semibold text-center py-4'>Total Services: {services.length}</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     services.map(service =>

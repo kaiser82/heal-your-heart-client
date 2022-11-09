@@ -7,19 +7,18 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) {
-
         return (
-            <div className='text-center'>
-                <progress className="progress w-56"></progress>
+            <div className='text-center text-blue-600'>
+                <button className="btn btn-ghost loading">loading</button>
             </div>
         );
     }
 
-    if (!user) {
-        return <Navigate to='/signIn' state={{ from: location }} replace></Navigate>
+    if (user?.uid) {
+        return children;
     }
+    return <Navigate to='/signIn' state={{ from: location }} replace></Navigate>
 
-    return children;
 
 };
 

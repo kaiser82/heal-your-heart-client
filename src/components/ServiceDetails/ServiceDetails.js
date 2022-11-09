@@ -24,7 +24,8 @@ const ServiceDetails = () => {
             </div>
             <div>
                 {
-                    loading ? <div className='text-center'><progress className="progress w-56 "></progress></div> : <div></div>
+                    loading && <div className='text-center text-blue-600'><button className="btn btn-ghost loading">loading...</button>
+                    </div>
                 }
                 <h2 className='text-xl font-semibold'>Reviews of service: {serviceName}</h2>
                 {/* Table start */}
@@ -39,9 +40,6 @@ const ServiceDetails = () => {
                         </thead>
                         <tbody>
                             {
-                                // reviews.map(review => (
-                                //     <Table key={review._id} review={review}></Table>
-                                // ));
 
                                 (reviews.filter(rev => rev.service === _id)).map(review => <Table key={review._id} review={review}></Table>)
 

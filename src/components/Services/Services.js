@@ -17,7 +17,7 @@ const Services = () => {
     return (
         <div>
             {
-                loading ? <div className='text-center'><progress className="progress w-56 "></progress></div> : <div></div>
+                loading ? <div className='text-center text-blue-600'><button className="btn btn-ghost loading">loading</button></div> : <div></div>
             }
             <h2 className='text-4xl font-semibold text-center py-4'>Total Services: {services.length}</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>

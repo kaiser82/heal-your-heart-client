@@ -10,7 +10,7 @@ const Navbar = () => {
         toast.success('Successfully Sign Out!')
     }
     return (
-        <div className="navbar bg-base-200">
+        <div className="navbar bg-purple-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost md:hidden">

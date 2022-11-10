@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Card from '../Card/Card';
+import MyServices from '../MyServices/MyServices';
 import Carousel from './Carousel';
 
 const Home = () => {
@@ -12,10 +14,10 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])
-    console.log(services);
+
     return (
         <div>
-            <h2>Home page</h2>
+
             <Carousel></Carousel>
             <h2>Services</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -25,6 +27,8 @@ const Home = () => {
                     )
                 }
             </div>
+            <div className='text-center py-2'><Link to='/services'><button className='btn btn-primary  w-1/4'>See All</button></Link></div>
+            <MyServices></MyServices>
         </div>
     );
 };

@@ -52,11 +52,11 @@ const ReviewEdit = () => {
             .catch(e => console.log(e.message))
     }
     return (
-        <div>
-            <h2 className='text-3xl font-semibold text-center py-5'>Add Review for service: {'serviceName'}</h2>
+        <div className='py-5'>
+            <h2 className='text-3xl font-semibold text-center py-5'>Update your Review</h2>
             <form onSubmit={handleUpdateReview} className='w-3/4 mx-auto'>
                 <textarea name='message' defaultValue={review.message} className="textarea textarea-bordered h-24 w-full text-lg" placeholder="Enter your review here...."></textarea>
-                <input className='btn btn-primary' type="submit" value="Update Review" />
+                <div className='text-center'><input className='btn btn-primary' type="submit" value="Update Review" /></div>
             </form>
         </div>
     );

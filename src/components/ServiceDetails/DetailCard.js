@@ -1,9 +1,15 @@
 import React from 'react';
+
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const detailCard = ({ service }) => {
+
+const DetailCard = ({ service, handleAddService }) => {
+
+
     const { _id, serviceName, price, description, rating, image } = service;
+
+
     return (
         <div>
             <div className="card card-compact w-full bg-base-100 shadow-xl">
@@ -16,7 +22,7 @@ const detailCard = ({ service }) => {
                             <p className='font-semibold'>Price: {price}</p>
                             <p className='flex text-md items-center space-x-1'><FaStar className='text-yellow-500' /> <span>{rating}</span></p>
                         </div>
-                        <Link to='/myServices'><button className="btn btn-primary">Add Service</button></Link>
+                        <Link to='/myServices'><button onClick={() => handleAddService(_id)} className="btn btn-primary">Add Service</button></Link>
                     </div>
                 </div>
             </div>
@@ -24,4 +30,4 @@ const detailCard = ({ service }) => {
     );
 };
 
-export default detailCard;
+export default DetailCard;

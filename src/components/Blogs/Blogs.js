@@ -1,9 +1,11 @@
 import React from 'react';
 
 const Blogs = () => {
+
     return (
         <div className='md:w-5/6 mx-auto space-y-5'>
             <h2 className='text-4xl font-bold text-center py-5'>Blogs For Power User</h2>
+
             {/* card1 */}
             <div className="card lg:card-side bg-base-100 shadow-xl">
                 <div className='avatar '>

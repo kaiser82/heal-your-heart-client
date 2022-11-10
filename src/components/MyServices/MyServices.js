@@ -12,7 +12,7 @@ const MyServices = () => {
     const [myServices, setMyServices] = useState([]);
     console.log(myServices)
     useEffect(() => {
-        fetch(`http://localhost:5000/myServices?email=${user?.email}`)
+        fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/myServices?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyServices(data))
     }, [user?.email])

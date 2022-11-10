@@ -18,7 +18,7 @@ const ReviewEdit = () => {
     console.log(review)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${id}`)
+        fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/reviews/${id}`)
             .then(res => res.json())
             .then(data => setReview(data))
     }, [id, refresh])
@@ -34,7 +34,7 @@ const ReviewEdit = () => {
             message
         }
 
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -10,7 +10,7 @@ const Home = () => {
     console.log(services)
     const { loading } = useContext(AuthContext)
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://b6a11-service-review-server-side-kaiser82.vercel.app/services')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

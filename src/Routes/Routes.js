@@ -35,7 +35,7 @@ export const routes = createBrowserRouter([
             {
                 path: 'details/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/details/${params.id}`)
             },
             {
                 path: '/signIn',
@@ -52,12 +52,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/reviews/:id',
                 element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/details/${params.id}`)
             },
             {
                 path: '/addService/:id',
                 element: <PrivateRoute><ConfirmAddService></ConfirmAddService></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://b6a11-service-review-server-side-kaiser82.vercel.app/details/${params.id}`)
             },
             {
                 path: '/myServices',

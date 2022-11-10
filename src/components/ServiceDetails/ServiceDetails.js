@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import DetailCard from './DetailCard'
@@ -21,7 +22,11 @@ const ServiceDetails = () => {
             .then(data => setReviews(data))
     }, [])
 
-
+    const handleNotice = () => {
+        if (!user) {
+            toast.error("Please login to add a review!")
+        }
+    }
 
 
     return (
@@ -53,7 +58,7 @@ const ServiceDetails = () => {
                     </table>
                 </div>
                 {/* Table end */}
-                <Link to={`/reviews/${_id}`}><button className='btn btn-primary'>Add review</button></Link>
+                <Link to={`/reviews/${_id}`}><button onClick={handleNotice} className='btn btn-primary'>Add review</button></Link>
             </div>
         </div>
     );

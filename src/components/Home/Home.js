@@ -4,6 +4,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Card from '../Card/Card';
 import MyServices from '../MyServices/MyServices';
 import Carousel from './Carousel';
+import SectionOne from './SectionOne';
 
 const Home = () => {
     const [services, setServices] = useState([]);
@@ -28,7 +29,12 @@ const Home = () => {
                 }
             </div>
             <div className='text-center py-2'><Link to='/services'><button className='btn btn-primary  w-1/4'>See All</button></Link></div>
-            <MyServices></MyServices>
+            <div className='py-5'>
+                <MyServices></MyServices>
+            </div>
+            <div className='py-5'>
+                <SectionOne></SectionOne>
+            </div>
         </div>
     );
 };

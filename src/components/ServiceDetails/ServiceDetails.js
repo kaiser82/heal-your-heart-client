@@ -30,7 +30,7 @@ const ServiceDetails = () => {
 
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2'>
+        <div className='grid grid-cols-1 md:grid-cols-2 py-5'>
             <div className='w-11/12 mx-auto'>
                 <DetailCard service={service} ></DetailCard>
             </div>
@@ -39,7 +39,7 @@ const ServiceDetails = () => {
                     loading && <div className='text-center text-blue-600'><button className="btn btn-ghost loading">loading...</button>
                     </div>
                 }
-                <h2 className='text-xl font-semibold'>Reviews of service: {serviceName}</h2>
+                <h2 className='text-2xl font-bold text-center pb-5'>Reviews of service: {serviceName}</h2>
                 {/* Table start */}
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -58,7 +58,7 @@ const ServiceDetails = () => {
                     </table>
                 </div>
                 {/* Table end */}
-                <Link to={`/reviews/${_id}`}><button onClick={handleNotice} className='btn btn-primary'>Add review</button></Link>
+                <div className='text-right pt-5'><Link to={`/reviews/${_id}`}><button onClick={handleNotice} className='btn btn-primary'>Add review</button></Link></div>
             </div>
         </div>
     );

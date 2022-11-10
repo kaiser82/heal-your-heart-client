@@ -19,10 +19,10 @@ const MyServices = () => {
 
 
     return (
-        <div>
-            <h2 className='text-3xl font-bold text-center'>My Added Services:{myServices.length}</h2>
+        <div className='space-y-5'>
+            <h2 className='text-4xl font-bold text-center pb-5'>My Added Services:{myServices.length}</h2>
 
-            <div className="overflow-x-auto w-xl">
+            <div className="overflow-x-auto w-xl ">
                 <table className="table w-full ">
                     <thead >
                         <tr>
@@ -31,7 +31,7 @@ const MyServices = () => {
                             <th>Rating</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {
                             myServices.map(myService => <MyServiceTable key={myService._id} myService={myService}></MyServiceTable>)
                         }

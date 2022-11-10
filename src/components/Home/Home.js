@@ -20,7 +20,7 @@ const Home = () => {
         <div>
 
             <Carousel></Carousel>
-            <h2>Services</h2>
+            <h2 className='text-4xl font-bold text-center py-5'> Offerd Services</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     services.slice(0, 3).map(service =>
@@ -28,7 +28,7 @@ const Home = () => {
                     )
                 }
             </div>
-            <div className='text-center py-2'><Link to='/services'><button className='btn btn-primary  w-1/4'>See All</button></Link></div>
+            <div className='text-end py-5'><Link to='/services'><button className='btn btn-primary  '>See All Services</button></Link></div>
             <div className='py-5'>
                 <MyServices></MyServices>
             </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const MyServiceTable = ({ myService }) => {
-    const { serviceName, image, price, serviceId, rating } = myService
+    const { serviceName, image, price, rating } = myService
     return (
-        <tr>
+        <tr >
 
             <td>
                 <div className="flex items-center space-x-3">

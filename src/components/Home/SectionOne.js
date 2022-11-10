@@ -4,10 +4,11 @@ const SectionOne = () => {
     return (
         <div className='space-y-5'>
             <h2 className='text-4xl font-bold text-center pb-5'>Our Special Packages</h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-purple-50'>
                 {/* card 1 */}
                 <div className="card w-full bg-base-100 shadow-xl">
                     <figure><img src="https://cogentnetwork.org/asset/foto_statis/membership.jpg" alt="img" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Membership Package</h2>
                         <p>This package will give you special discount and privilege over others. </p>
@@ -44,7 +45,7 @@ const SectionOne = () => {
 
 
             <div className='text-center py-5'>
-                <div className="stats shadow w-full bg-purple-100">
+                <div className="stats shadow w-full bg-purple-50">
 
                     <div className="stat place-items-center">
                         <div className="stat-title">Experience</div>

@@ -17,6 +17,11 @@ const Reviews = () => {
         const userName = user?.displayName;
         const photo = user?.photoURL;
 
+        if (message === '') {
+            toast.error('Pleaser enter your review!');
+            return;
+        }
+
         const review = {
 
             service: _id,
@@ -50,10 +55,10 @@ const Reviews = () => {
 
     return (
         <div>
-            <h2 className='text-3xl font-semibold text-center py-5'>Add Review for service: {serviceName}</h2>
+            <h2 className='text-3xl font-bold text-center py-5'>Add Review for service: {serviceName}</h2>
             <form onSubmit={handleSubmitReview} className='w-3/4 mx-auto'>
                 <textarea name='message' className="textarea textarea-bordered h-24 w-full text-lg" placeholder="Enter your review here...."></textarea>
-                <input className='btn btn-primary' type="submit" value="Submit Review" />
+                <div className='text-center py-5'><input className='btn btn-primary' type="submit" value="Submit Review" /></div>
             </form>
         </div>
     );

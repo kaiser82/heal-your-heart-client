@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import DetailCard from './DetailCard'
 import Table from './Table';
-import toast from 'react-hot-toast';
+
 
 
 const ServiceDetails = () => {
@@ -22,39 +22,12 @@ const ServiceDetails = () => {
     }, [])
 
 
-    const handleAddService = (id) => {
-        const myService = {
-            serviceId: id,
-            serviceName,
-            price,
-            image
-        }
-
-        fetch('http://localhost:5000/myServices', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(myService)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.acknowledged) {
-                    toast.success('Service added to my service.');
-
-                }
-            })
-            .catch(er => console.log(er.message))
-
-
-    }
 
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='w-11/12 mx-auto'>
-                <DetailCard service={service} handleAddService={handleAddService}></DetailCard>
+                <DetailCard service={service} ></DetailCard>
             </div>
             <div>
                 {

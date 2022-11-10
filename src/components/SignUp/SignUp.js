@@ -35,7 +35,7 @@ const SignUp = () => {
                     handleEmailVerification()
                     navigate('/');
                 })
-                .catch(e => toast.error(e.message))
+                .catch(e => console.log(e))
         }
 
 

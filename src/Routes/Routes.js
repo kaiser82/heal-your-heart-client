@@ -4,6 +4,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import MyReviews from "../components/MyReviews/MyReviews";
 import ReviewEdit from "../components/MyReviews/ReviewEdit";
+import ConfirmAddService from "../components/MyServices/ConfirmAddService";
 import MyServices from "../components/MyServices/MyServices";
 import Reviews from "../components/Reviews/Reviews";
 import ServiceDetails from "../components/ServiceDetails/ServiceDetails";
@@ -54,9 +55,14 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
             },
             {
+                path: '/addService/:id',
+                element: <PrivateRoute><ConfirmAddService></ConfirmAddService></PrivateRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+            },
+            {
                 path: '/myServices',
                 element: <PrivateRoute><MyServices></MyServices></PrivateRoute>,
-                // loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+
             },
             {
                 path: '/myReviews',

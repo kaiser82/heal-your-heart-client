@@ -22,7 +22,7 @@ const DetailCard = ({ service, handleAddService }) => {
                             <p className='font-semibold'>Price: {price}</p>
                             <p className='flex text-md items-center space-x-1'><FaStar className='text-yellow-500' /> <span>{rating}</span></p>
                         </div>
-                        <Link to='/myServices'><button onClick={() => handleAddService(_id)} className="btn btn-primary">Add Service</button></Link>
+                        <Link to={`/addService/${_id}`}><button className="btn btn-primary">Add Service</button></Link>
                     </div>
                 </div>
             </div>

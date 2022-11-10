@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import MyServiceTable from './MyServiceTable';
 
 
 const MyServices = () => {
+    const info = useLoaderData();
+    const { user } = useContext(AuthContext)
+    console.log(info)
 
     const [myServices, setMyServices] = useState([]);
     console.log(myServices)
     useEffect(() => {
-        fetch('http://localhost:5000/myServices')
+        fetch(`http://localhost:5000/myServices?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setMyServices(data))
-    }, [])
+    }, [user?.email])
 
 
     return (
@@ -23,7 +28,7 @@ const MyServices = () => {
                         <tr>
                             <th>Services</th>
                             <th>Price</th>
-                            <th>ServiceId</th>
+                            <th>Rating</th>
                         </tr>
                     </thead>
                     <tbody>

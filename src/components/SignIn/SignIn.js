@@ -107,7 +107,7 @@ const SignIn = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 text-gray-400">Don't have an account?
-                <Link rel="noopener noreferrer" to="/register" className="underline text-gray-100 ml-2">Register</Link>
+                <Link to="/signUp" className="underline text-gray-100 ml-2">Sing Up</Link>
             </p>
         </div>
     );

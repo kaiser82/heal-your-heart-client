@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MyServiceTable = ({ myService }) => {
-    const { serviceName, image, price, serviceId } = myService
+    const { serviceName, image, price, serviceId, rating } = myService
     return (
         <tr>
 
@@ -22,7 +22,7 @@ const MyServiceTable = ({ myService }) => {
                 {price}
 
             </td>
-            <td>{serviceId}</td>
+            <td>{rating}</td>
         </tr>
     );
 };

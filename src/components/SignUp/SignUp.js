@@ -2,13 +2,15 @@ import React from 'react';
 import { GithubAuthProvider, GoogleAuthProvider, TwitterAuthProvider } from 'firebase/auth';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
 
     const { createUser, providerLogin, updateUserProfile, verifyEmail } = useContext(AuthContext);
     const navigate = useNavigate()
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSubmit = (event) => {
 
@@ -33,7 +35,7 @@ const SignUp = () => {
                     form.reset();
                     handleUpdateUserProfile(name, picture);
                     handleEmailVerification()
-                    navigate('/');
+                    navigate(from, { replace: true });
                 })
                 .catch(e => console.log(e))
         }
@@ -136,7 +138,7 @@ const SignUp = () => {
                 </button>
             </div>
             <p className="text-xs text-center sm:px-6 text-gray-400">Already have an account?
-                <Link to="/login" className="underline text-gray-100 ml-2">Sign in</Link>
+                <Link to="/signIn" className="underline text-gray-100 ml-2">Sign in</Link>
             </p>
         </div>
     );
